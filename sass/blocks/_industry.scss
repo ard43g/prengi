@@ -1,0 +1,59 @@
+.industry {
+    min-height: 1334px;
+    padding-top: 81px;
+    
+    &__wrapper {
+        margin: 44px 0 80px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 355px 355px 355px;
+
+    }
+    &__item {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+
+        .industry__title {
+            display: grid;
+            height: 156px;
+            width: 100%;
+            font-size: 23px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .5);
+            color: #ffffff;
+            align-items: center;
+            
+            
+            
+        }
+        &-1{
+            background: url(../../img/industry/advantages2-1.jpg) center center / cover no-repeat;
+            
+        }
+        &-2{
+            background: url(../../img/industry/advantages2-2.jpg) center center / cover no-repeat;
+        }
+        &-3{
+            background: url(../../img/industry/advantages2-3.jpg) center center / cover no-repeat;
+        }
+        &-4{
+            background: url(../../img/industry/advantages2-4.jpg) center center / cover no-repeat;
+        }
+        &-5{
+            background: url(../../img/industry/advantages2-5.jpg) center center / cover no-repeat;
+        }
+        &-6{
+            background: url(../../img/industry/advantages2-6.jpg) center center / cover no-repeat;
+        }
+        
+    }
+
+
+
+
+
+
+}

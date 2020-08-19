@@ -1,0 +1,42 @@
+.training {
+    &-pr {
+        margin-top: 300px;
+        margin-right: 400px;
+        background: url('../../img/promo/promo_bg.jpg') center center / cover no-repeat; 
+
+    }
+    height: 996px;
+    padding-top: 20px;
+    &_carousel {
+        padding-top: 100px;
+        
+        position: relative;
+        width: 900px;
+        margin: 0  auto;
+        img {
+            width: 100%;
+        }
+    }
+    .slick-prev  {
+        position: absolute;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.01 );
+        top: 50%;
+        transform: translateY(-100%);
+        left: -100px;
+
+    }
+    .slick-next {
+        position: absolute;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.01 );
+        top: 50%;
+        transform: translateY(-100%);
+        right: (0 - 100px);
+    }
+   
+
+
+
+
+}

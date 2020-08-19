@@ -1,0 +1,27 @@
+.button {
+    display: block;
+    width: 241px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    background-color: #00c2f0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    &:hover {
+        transition: 0.5s all;
+        box-shadow: 10px 10px 25px #F9C4E1 ;
+       
+        
+    }
+    
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    
+    
+}

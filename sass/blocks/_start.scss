@@ -1,0 +1,33 @@
+.start {
+    .title {
+        margin: 74px 0 30px 0;
+    }
+    .button {
+        margin: 0 auto;
+    }
+    min-height: 690px;
+    padding: 80px 0;
+    &__icon {
+        width: 302px;
+        height: 302px;
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+        background-image: url(../../img/start/angle.svg);
+        
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 31px;
+        img {
+            width: 100%;
+        }
+        
+    }
+
+
+
+
+
+}

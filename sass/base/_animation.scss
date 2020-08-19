@@ -1,0 +1,131 @@
+@keyframes afternav {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+@keyframes button_animation {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes button_animation_more {
+    from {
+        background-color: $main-color;
+        color : #ffff;
+    }
+    50% {
+        background-color: #E0E0E0;
+        color : $second-color;
+        border: none;
+        box-shadow: 4px 4px 25px 5px #5E6A94;
+    }
+
+    to {
+        background-color: $main-color;
+        color : #ffff;
+    }
+}
+
+@keyframes content_more {
+	from {
+	}
+
+	to {
+	}
+}
+
+
+
+
+@mixin anim ($duration, $delay ) {
+	animation-name: burger;
+	animation-duration: $duration;
+	animation-delay: $delay;
+	/* @keyframes anim {
+		from {
+		}
+	
+		to {
+		}
+	} */
+	
+}
+
+@mixin scale ($size, $duration/* , $delay */) {
+	animation-name: scale_burg;
+	animation-duration: $duration;
+	/*animation-delay: $delay; */
+	animation-fill-mode: both;
+	@keyframes scale_burg {
+		from {
+			transform: scale(1);
+		}
+	
+		to {
+			transform: scale($size);
+		}
+	}
+	
+}
+
+@mixin rotate_l ($deg, $duration) {
+	animation-name: rotate_burg_l;
+	animation-fill-mode: both;
+	animation-duration: $duration;
+	@keyframes rotate_burg_l {
+		from {
+			transform: rotate(0);
+		}
+	
+		to {
+			transform: rotate($deg);
+		}
+	}
+	
+}
+
+@mixin rotate_r ($deg,  $duration) {
+	animation-name: rotate_burg_r;
+	animation-fill-mode: both;
+	animation-duration: $duration;
+	@keyframes rotate_burg_r {
+		from {
+			transform: rotate(0);
+		}
+	
+		to {
+			transform: rotate($deg);
+		}
+	}
+	
+}
+
+@mixin overf ($perc,  $duration) {
+	animation-name: over;
+	animation-duration: $duration;
+	@keyframes over {
+		from{
+			transform: translateY($perc);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+}
