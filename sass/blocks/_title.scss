@@ -11,6 +11,9 @@
 	text-transform: inherit;
 	font-size: 42px;
 	padding: 0px 175px 0px 0px;
+	@media (max-width: $md2+px) {
+		padding: 0;
+	}
 	
          
     }

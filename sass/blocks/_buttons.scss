@@ -12,8 +12,10 @@
     text-align: center;
     text-transform: uppercase;
     &:hover {
-        transition: 0.5s all;
-        box-shadow: 10px 10px 25px #F9C4E1 ;
+        @media (min-width: $md3+px) {
+			transition: 0.5s all;
+        	box-shadow: 10px 10px 25px #F9C4E1 ;
+		}
        
         
     }

@@ -83,6 +83,7 @@
 		top: 16px;
 		right: 45px;
 		width: 30px;
+		z-index: 2;
 		@include overf(-100%, 0.3s);
 		a img {
 			display: block;
