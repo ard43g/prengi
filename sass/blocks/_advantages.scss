@@ -1,32 +1,49 @@
 .advantages {
     display: block;
     min-height: 896px;
-    padding: 79px 0 81px 0;
+	padding: 79px 0 81px 0;
+	@media (max-width: $md4+px) {
+		padding: 15px 0;
+	}
 
     &__blocks {
         display: flex;
-        justify-content: space-between;
+		justify-content: space-between;
+		margin: 0 -10px;
+		@media (max-width: $md4+px) {
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			
+			
+		}
         &-item {
-            position: relative;
-            width: 360px;
-            height: 255px;
+			
+			position: relative;
+			// width: 360px;
+			min-height: 255px;
+			flex: 0 1 33.333%;
             border: solid 1px #ececec;
-            margin: 0 auto;
+            margin: 0 10px;
             text-align: center;
-            align-items: center;
+			align-items: center;
+			@media (max-width: $md4+px) {
+				margin-bottom: 15px;
+				flex: 1 1 100%;
+			}
             span {
                 font-weight: bold;
             }
         }
         &-descr {
             width: 100%;
-            position: absolute;
             font-size: 18px;
             font-weight: 300;
             text-align: center;
             color: #393939;
             line-height: 18px;
-            transform: translateY(-15px);
+			transform: translateY(-15px);
+			
            
 
         }
@@ -48,7 +65,14 @@
         display: block;
         margin: 0 auto;
         text-align: center;
-        padding: 50px  0 37px 0;
+		padding: 50px  0 37px 0;
+		img {
+			
+		}
+		@media (max-width: $md4+px) {
+			padding: 10px;
+			height: 100%;
+		}
         .title {
             margin-top: 33px;
             line-height: 30px;

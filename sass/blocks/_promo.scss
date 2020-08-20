@@ -9,9 +9,22 @@
 		margin-top: 50px;
 	}
 	// .promo__wrapper
-
+	
 	&__wrapper {
-		background: url('../../img/promo/promo_bg.jpg') center center / cover no-repeat;
+		
+	}
+	&__wrapper {
+		background: url('../img/promo/promo_bg.jpg') center center / cover no-repeat;
+		&_2 {
+			background: url('../img/decision/dicision_bg.jpg') center center / cover no-repeat;
+		}
+		&_3 {
+			background: url('../img/server/server1.jpg') center center / cover no-repeat;
+		}
+		&_4 {
+			background: url('../img/server/server2.jpg') center center / cover no-repeat;
+		}
+		
 		.container {
 		}
 
@@ -19,33 +32,45 @@
 		padding: 0px 10px 0px 10px;
 		 */
 	}
+	&__carousel {
+		
+	}
 
 	// .promo__content
 
 	&__content {
 		width: 100%;
 		display: flex;
+		min-height: 700px;
+		padding-top: 216px - 94px + 10px;
 		@media (min-width: $md2+px) {
 			justify-content: space-between;
+		}
+		@media (max-width: $md2+px) {
+			padding-top: 0px;
 		}
 		@media (max-width: $md3+px) {
 			flex-direction: column;
 			padding-top: 60px;
 		}
-
 		
-		padding-top: 216px - 94px + 10px;
+		
+		
 		
 	}
 
 	// .promo__text
 
 	&__text {
-        margin-top: 133px;
+       
         padding-top: 0;
 		padding-bottom: 0;
+		margin-top: 60px;
+		@media (min-width: $md2+px) {
+			margin-top: 133px;
+		}
 		@media (max-width: $md3+px) {
-			margin-top: 10px;
+			margin: 10px 0 30px;
 			flex: 0 1 50%;
 		}
 	}
@@ -72,11 +97,23 @@
 		}
 		max-height: 569px;
 		max-width: 434px;
-		align-self: flex-end;
+		&:nth-child(1) {
+			align-self: flex-end;
+		}
+		align-self: center;
+		overflow: hidden;
+		
+		
 		img {
 			display: block;
+			width: 100%;
+			:nth-child(1) {
+				
+			}
+			
 			@media (max-width: $md3+px) {
-				width: 100%;
+				
+				
 			}
 		
 		}
@@ -113,9 +150,10 @@
 	/* Стрелка */
 	.slick-arrow{
 		width: 6px;
-		height: 11px;
+		height: 10px;
 		position: absolute;
 		z-index: 2;
+		
 	}
 	/* Стрелка влево */
 	.slick-arrow.slick-prev{
@@ -139,6 +177,9 @@
 		left: 50%;
 		transform: translateX(-50%);
 		display: flex;
+		@media (max-width: $md4+px) {
+			top: 62%;
+		}
 		
 	}
 	.slick-dots li{

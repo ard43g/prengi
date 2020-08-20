@@ -57,7 +57,30 @@ window.addEventListener('DOMContentLoaded', () => {
 		dots:true,
         speed: 300,
 		slidesToShow: 1,
+		adaptiveHeight:false,
 		appendDots: $('.promo__carousel'),
+		responsive: [                
+			{
+				breakpoint: 992,
+				settings: {
+					arrows:false,
+				}
+			},{
+				breakpoint: 768,
+				settings: {
+					adaptiveHeight:true,
+					arrows:false,
+					
+				}
+			},{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					adaptiveHeight:true,
+					arrows:false,
+				}
+			}
+		],
 
 	});
 

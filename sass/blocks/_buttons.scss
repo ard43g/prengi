@@ -10,9 +10,13 @@
     font-size: 16px;
     font-weight: 700;
     text-align: center;
-    text-transform: uppercase;
+	text-transform: uppercase;
+	@media (max-width: $md4+px) {
+		margin: 0 auto;
+		
+	}
     &:hover {
-        @media (min-width: $md3+px) {
+        @media (min-width: $md2+px) {
 			transition: 0.5s all;
         	box-shadow: 10px 10px 25px #F9C4E1 ;
 		}
