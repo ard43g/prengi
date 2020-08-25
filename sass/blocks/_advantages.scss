@@ -10,7 +10,7 @@
         display: flex;
 		justify-content: space-between;
 		margin: 0 -10px;
-		@media (max-width: $md4+px) {
+		@media (max-width: 660px) {
 			flex-wrap: wrap;
 			align-items: center;
 			justify-content: center;
@@ -27,7 +27,7 @@
             margin: 0 10px;
             text-align: center;
 			align-items: center;
-			@media (max-width: $md4+px) {
+			@media (max-width: 660px) {
 				margin-bottom: 15px;
 				flex: 1 1 100%;
 			}

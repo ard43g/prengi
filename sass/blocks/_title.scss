@@ -1,12 +1,12 @@
 .title {
-    margin: 0 auto;
-    font-size: 40px;
+	margin: 0 auto;
+	font-size: 40px;
 	font-weight: 900;
-    text-transform: uppercase;
+	text-transform: uppercase;
    
     &__promo {
-    color: #ffffff;
-    text-align: left;
+	color: #ffffff;
+	text-align: left;
 	line-height: 48px;
 	text-transform: inherit;
 	font-size: 42px;
@@ -18,11 +18,12 @@
          
     }
     &-white {
-        font-size: 30px;
-        font-weight: 900;
-        line-height: 36px;
-        text-align: center;
-        color: rgb(255, 255, 255);
+		font-size: 30px;
+		font-weight: 900;
+		line-height: 36px;
+		text-align: center;
+		color: rgb(255, 255, 255);
+		text-transform: none;
           
     }
     &-black {
