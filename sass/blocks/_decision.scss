@@ -1,29 +1,28 @@
 .decision {
-	
-
-		// .decision__title
-
-	&__title {
-		max-width: 625px;
-	}
-
-
-
     min-height: 889px;
 	 padding: 79px 0 61px 0;
+	 @media (max-width: $md2+px) {
+		 min-height: 100%;
+	 }
 	 @media (max-width: $md3+px) {
 		 padding-top: 60px;
 	 }
+	 @media (max-width: 660px) {
+		min-height: 100%;
+	}
 	 @media (max-width: $md4+px) {
 		 padding-top: 70px;
 	 }
-    background: url('../../img/decision/dicision_bg.jpg') center center / cover no-repeat;
-    
-    &__navigation {
-		  max-width: 843px;
-        min-height: 65px;
-      //   width: 843px;
-        margin: 25px auto 35px  ;
+    background: url('../img/decision/dicision_bg.jpg') center (center / cover) no-repeat;
+	
+	 // .decision__title
+	&__title {
+		max-width: 625px;
+	}
+	&__navigation {
+		max-width: 843px;
+		min-height: 65px;
+		margin: 25px auto 35px;
 
         &-block {
             height: 100%;
@@ -89,44 +88,100 @@
             
         }
     }
-    &__presentation {
+   &__presentation {
+		width: 100%;
+		
        &-block {
             max-width: 947px;
             height: 560px;
             margin: 0 auto;
-            background: url('../../img/decision/decision_pc.svg') center center/cover no-repeat;
-          
+            background: url('../img/decision/decision_pc.svg') center center/100% auto no-repeat;
+				@media (max-width: $md3+px) {
+					background: none;
+				}
+				@media (max-width: 660px) {
+					height: 100%;
+				}
         }
         &-items {
-            top: 37px;
+				top: 6.8%;
             margin: 0 auto; 
-            width: 695px;
+				max-width: 695px;
+				@media (max-width: $md3+px) {
+					padding: 0px 10px 0px 0px;
+					
+				}
             img {
+					display: block;
                 margin: 0 auto;
                 width: 100%;
-            }
-        }
+				}
+				
+				.slick-dots{
+					position: absolute;
+					bottom: -7%;
+					left: 50%;
+					transform: translateX(-50%);
+					display: flex;
+					
+					
+				}
+				.slick-dots li{
+					border-radius: 50%;
+					width: 12px;
+					height: 12px;
+					border: 1px solid #fff;
+					background: #000;
+					color: #fff;
+					margin: 0px 2px;
+					
+					
+				}
+				/* Активная точка */
+				.slick-dots li.slick-active{
+					background: linear-gradient(to right, #cdd5df, #9fe3f1);
+				}
+				/* Элемент точки */
+				.slick-dots li button{	
+					font-size: 0;
+				}
+		  }
+		  &-item {
+			.decision__presentation-content {
+				
+			}
+				@media (max-width: 769px) {
+					max-width: 590px;
+					transform: translate(9%, 12%);
+					
+				}
+
+		  }
+		  .slick-prev, .slick-next {
+				position: absolute;
+				border: none;
+				top: 50%;
+				transform: translateY(-100%);
+				padding: 0px 0px 0px 0px;
+				color: #000;
+				background-color: rgba(0, 0, 0, 0.01 );
+				@media (min-width: $md2+px) {
+					cursor: pointer;
+				}
+		  }
         .slick-prev  {
-            position: absolute;
-            border: none;
-            background-color: rgba(0, 0, 0, 0.01 );
-            top: 50%;
-            transform: translateY(-100%);
-            left: -173px;
-            cursor: pointer;
-    
+				left: -173px;
+				@media (max-width: 1080+px) {
+					left: -100px;
+				}
         }
         .slick-next {
-            position: absolute;
-            border: none;
-            background-color: rgba(0, 0, 0, 0.01 );
-            top: 50%;
-            transform: translateY(-100%);
-            right: (0 - 173px);
-            cursor: pointer;
+				right: ( -173px);
+				@media (max-width: 1080+px) {
+					right: -100px;
+				}
         }
         
-
 
 
 
@@ -161,7 +216,7 @@
 
 
 
-    }
+   }
 
 
 }

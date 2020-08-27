@@ -589,6 +589,15 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: black; }
 
+@media (max-width: 479.98px) {
+  .industry__title {
+    font-size: 27px; } }
+
+@media (max-width: 479.98px) {
+  .start__title {
+    font-size: 20px;
+    line-height: 24px; } }
+
 .button {
   display: block;
   width: 241px;
@@ -676,15 +685,21 @@ h1, h2, h3, h4, h5, h6 {
 .decision {
   min-height: 889px;
   padding: 79px 0 61px 0;
-  background: url("../../img/decision/dicision_bg.jpg") center center/cover no-repeat; }
-  .decision__title {
-    max-width: 625px; }
+  background: url("../img/decision/dicision_bg.jpg") center center/cover no-repeat; }
+  @media (max-width: 991.98px) {
+    .decision {
+      min-height: 100%; } }
   @media (max-width: 767.98px) {
     .decision {
       padding-top: 60px; } }
+  @media (max-width: 660px) {
+    .decision {
+      min-height: 100%; } }
   @media (max-width: 479.98px) {
     .decision {
       padding-top: 70px; } }
+  .decision__title {
+    max-width: 625px; }
   .decision__navigation {
     max-width: 843px;
     min-height: 65px;
@@ -740,6 +755,7 @@ h1, h2, h3, h4, h5, h6 {
           border: none;
           padding-right: 0; }
   .decision__presentation {
+    width: 100%;
     /*   &-block {
             position: relative;
             width: 947px;
@@ -761,30 +777,69 @@ h1, h2, h3, h4, h5, h6 {
       max-width: 947px;
       height: 560px;
       margin: 0 auto;
-      background: url("../../img/decision/decision_pc.svg") center center/cover no-repeat; }
+      background: url("../img/decision/decision_pc.svg") center center/100% auto no-repeat; }
+      @media (max-width: 767.98px) {
+        .decision__presentation-block {
+          background: none; } }
+      @media (max-width: 660px) {
+        .decision__presentation-block {
+          height: 100%; } }
     .decision__presentation-items {
-      top: 37px;
+      top: 6.8%;
       margin: 0 auto;
-      width: 695px; }
+      max-width: 695px;
+      /* Активная точка */
+      /* Элемент точки */ }
+      @media (max-width: 767.98px) {
+        .decision__presentation-items {
+          padding: 0px 10px 0px 0px; } }
       .decision__presentation-items img {
+        display: block;
         margin: 0 auto;
         width: 100%; }
+      .decision__presentation-items .slick-dots {
+        position: absolute;
+        bottom: -7%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex; }
+      .decision__presentation-items .slick-dots li {
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #fff;
+        background: #000;
+        color: #fff;
+        margin: 0px 2px; }
+      .decision__presentation-items .slick-dots li.slick-active {
+        background: linear-gradient(to right, #cdd5df, #9fe3f1); }
+      .decision__presentation-items .slick-dots li button {
+        font-size: 0; }
+    @media (max-width: 769px) {
+      .decision__presentation-item {
+        max-width: 590px;
+        transform: translate(9%, 12%); } }
+    .decision__presentation .slick-prev, .decision__presentation .slick-next {
+      position: absolute;
+      border: none;
+      top: 50%;
+      transform: translateY(-100%);
+      padding: 0px 0px 0px 0px;
+      color: #000;
+      background-color: rgba(0, 0, 0, 0.01); }
+      @media (min-width: 991.98px) {
+        .decision__presentation .slick-prev, .decision__presentation .slick-next {
+          cursor: pointer; } }
     .decision__presentation .slick-prev {
-      position: absolute;
-      border: none;
-      background-color: rgba(0, 0, 0, 0.01);
-      top: 50%;
-      transform: translateY(-100%);
-      left: -173px;
-      cursor: pointer; }
+      left: -173px; }
+      @media (max-width: 1080px) {
+        .decision__presentation .slick-prev {
+          left: -100px; } }
     .decision__presentation .slick-next {
-      position: absolute;
-      border: none;
-      background-color: rgba(0, 0, 0, 0.01);
-      top: 50%;
-      transform: translateY(-100%);
-      right: -173px;
-      cursor: pointer; }
+      right: -173px; }
+      @media (max-width: 1080px) {
+        .decision__presentation .slick-next {
+          right: -100px; } }
 
 .training {
   height: 996px;
@@ -818,15 +873,35 @@ h1, h2, h3, h4, h5, h6 {
 .industry {
   min-height: 1334px;
   padding-top: 81px; }
+  @media (max-width: 991.98px) {
+    .industry {
+      padding-top: 45px;
+      min-height: auto; } }
+  @media (max-width: 767.98px) {
+    .industry {
+      padding-top: 35px; } }
+  @media (max-width: 479.98px) {
+    .industry {
+      padding-top: 20px; } }
   .industry__wrapper {
     margin: 44px 0 80px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 355px 355px 355px; }
+    @media (max-width: 991.98px) {
+      .industry__wrapper {
+        margin: 15px 0 80px 0; } }
+    @media (max-width: 767.98px) {
+      .industry__wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr; } }
   .industry__item {
     display: grid;
     align-items: center;
     justify-items: center; }
+    @media (max-width: 767.98px) {
+      .industry__item {
+        margin: 0px 0px 10px 0px; } }
     .industry__item .industry__title {
       display: grid;
       height: 156px;
@@ -839,17 +914,17 @@ h1, h2, h3, h4, h5, h6 {
       color: #ffffff;
       align-items: center; }
     .industry__item-1 {
-      background: url(../../img/industry/advantages2-1.jpg) center center/cover no-repeat; }
+      background: url(../img/industry/advantages2-1.jpg) center center/cover no-repeat; }
     .industry__item-2 {
-      background: url(../../img/industry/advantages2-2.jpg) center center/cover no-repeat; }
+      background: url(../img/industry/advantages2-2.jpg) center center/cover no-repeat; }
     .industry__item-3 {
-      background: url(../../img/industry/advantages2-3.jpg) center center/cover no-repeat; }
+      background: url(../img/industry/advantages2-3.jpg) center center/cover no-repeat; }
     .industry__item-4 {
-      background: url(../../img/industry/advantages2-4.jpg) center center/cover no-repeat; }
+      background: url(../img/industry/advantages2-4.jpg) center center/cover no-repeat; }
     .industry__item-5 {
-      background: url(../../img/industry/advantages2-5.jpg) center center/cover no-repeat; }
+      background: url(../img/industry/advantages2-5.jpg) center center/cover no-repeat; }
     .industry__item-6 {
-      background: url(../../img/industry/advantages2-6.jpg) center center/cover no-repeat; }
+      background: url(../img/industry/advantages2-6.jpg) center center/cover no-repeat; }
 
 .server {
   min-height: 580px;
@@ -861,20 +936,57 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 50% 100%, 50% 100%; }
   .server__wrapper {
     position: relative; }
+  @media (max-width: 767.98px) {
+    .server {
+      background-size: 100% 100%, 0% 0%;
+      min-height: 100%;
+      padding-bottom: 50px; } }
+  @media (max-width: 479.98px) {
+    .server {
+      background-size: 0% 0%, 100% 100%; } }
   .server__items {
     display: flex; }
+    @media (max-width: 767.98px) {
+      .server__items {
+        display: block;
+        padding-top: 140px; } }
   .server__item {
     text-align: end;
     padding-right: 82px;
     width: 50%;
     margin-top: 270px; }
+    @media (max-width: 767.98px) {
+      .server__item {
+        width: 100%;
+        text-align: center;
+        padding: 0px 0px 0px 0px;
+        margin-bottom: 40px; } }
     .server__item-1 .title {
       text-align: end; }
+      @media (max-width: 767.98px) {
+        .server__item-1 .title {
+          text-align: center; } }
+    @media (max-width: 767.98px) {
+      .server__item {
+        margin: 40px 0px 100px 0px; } }
+    @media (max-width: 479.98px) {
+      .server__item {
+        margin: 40px 0px 40px 0px; } }
     .server__item-2 {
       text-align: start;
-      padding-left: 83px; }
+      padding: 0px 0px 0px 0px; }
+      @media (min-width: 767.98px) {
+        .server__item-2 {
+          padding-left: 83px; } }
+      @media (max-width: 767.98px) {
+        .server__item-2 {
+          text-align: center;
+          margin-bottom: 0; } }
       .server__item-2 .title {
         text-align: start; }
+        @media (max-width: 767.98px) {
+          .server__item-2 .title {
+            text-align: center; } }
   .server__descr {
     margin-top: 19px;
     font-size: 18px;
@@ -887,13 +999,19 @@ h1, h2, h3, h4, h5, h6 {
     top: 39px;
     left: 50%;
     transform: translateX(-50%);
-    width: 425px;
+    max-width: 425px;
     justify-content: center;
     position: absolute; }
+    @media (max-width: 767.98px) {
+      .server__title-item {
+        font-size: 25px; } }
   .server__square-wrapper {
     margin-top: 90px;
     display: flex;
     justify-content: space-between; }
+    @media (max-width: 767.98px) {
+      .server__square-wrapper {
+        visibility: hidden; } }
   .server__square-item {
     width: 167px;
     height: 167px;
@@ -906,23 +1024,43 @@ h1, h2, h3, h4, h5, h6 {
 .start {
   min-height: 690px;
   padding: 80px 0; }
+  @media (max-width: 991.98px) {
+    .start {
+      min-height: 100%; } }
   .start .title {
     margin: 74px 0 30px 0; }
+    @media (max-width: 991.98px) {
+      .start .title {
+        margin: 20px 0px 10px 0px; } }
   .start .button {
     margin: 0 auto; }
+  @media (max-width: 991.98px) {
+    .start {
+      padding: 20px 0px 40px 0px; } }
+  @media (max-width: 479.98px) {
+    .start {
+      min-height: 100%; } }
   .start__icon {
     width: 302px;
     height: 302px;
     display: block;
     justify-content: center;
     margin: 0 auto;
-    background-image: url(../../img/start/angle.svg); }
+    background-image: url(../img/start/angle.svg); }
+    @media (max-width: 991.98px) {
+      .start__icon {
+        width: 200px;
+        height: 200px;
+        background: url(../img/start/angle.svg) 0 0/100% 100% no-repeat; } }
   .start__img {
     display: block;
     margin: 0 auto;
-    padding-top: 31px; }
+    padding-top: 31px;
+    width: 80%; }
     .start__img img {
-      width: 100%; }
+      display: block;
+      width: 100%;
+      height: 90%; }
 
 .footer {
   min-height: 497px;

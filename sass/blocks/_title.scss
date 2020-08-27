@@ -36,3 +36,16 @@
     }
 
 }
+
+.industry__title{
+	@media (max-width: $md4+px) {
+		font-size: 27px;
+	}
+}
+
+.start__title {
+	@media (max-width: $md4+px) {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}

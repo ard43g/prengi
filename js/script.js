@@ -90,14 +90,34 @@ window.addEventListener('DOMContentLoaded', () => {
 	//   slick 2 ========================
 
 	$('.decision__presentation-items').slick({
-        prevArrow: '<button type="button" class="slick-prev"><img src="../img/decision/decision_arrow_left.svg"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="../img/decision/decision_arrow_right.svg"></button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src="img/decision/decision_arrow_left.svg"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="img/decision/decision_arrow_right.svg"></button>',
       
         speed: 1300,
 
         dots: false,
-        speed: 300,
-        slidesToShow: 1,
+		  slidesToShow: 1,
+		  
+		  responsive: [                 // адаптация по брейкпоинтам
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 1,
+					dots: true,
+					arrows: false,
+					fade: true,
+				}
+			},{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+					dots: true,
+					arrows: false,
+					fade: true,
+					adaptiveHeight: true,
+				}
+			}
+		],
 
 	});
 	
