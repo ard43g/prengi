@@ -1,192 +1,171 @@
 .menu__subheader {
-	@media (min-width: $md3+px) {
-	display: none;
-	}
-	@media (max-width: $md3+px) {
-		display: block;
-	}
-	position: absolute;
-	top: 18px;
-	right: 10px;
-	width: 30px;
-	height: 18px;
-	cursor: pointer;
-	z-index: 5;
-	transition: all 3s ease 0s;
-	
-	
-	
-	/* 
+    @media (min-width: $md3+px) {
+        display: none;
+    }
+    @media (max-width: $md3+px) {
+        display: block;
+    }
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 3s ease 0s;
+
+    /* 
 	@include anim(1s, 0); */
-	&:before, &:after {
-		content: "";
-		position: absolute;
-		width: 100%; 
-		height: 2px;
-		background: #000;
-		left: 0; 
-		transition: all 0.3s ease 0s;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
 
-	}
-	&:before {
-		top: 0;	
-	}
-	&:after {
-		bottom: 0;
-	}
-	
-	span{
-		top: calc(50% - 1px); 
-		left: 0px; 
-		position: absolute; 
-		width: 100%; 
-		height: 2px; 
-		background-color: #000;
-		
-	}		
+    span {
+        top: calc(50% - 1px);
+        left: 0px;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+    }
 
-	&.menu_active{
-		span {
-			@include scale(0, 0.5s /* 0 */);
-			
-		}
-		&:before {
-			@include rotate_l(45deg, 0.3s);
-			top: calc(50% - 1px);
-		}
-		&:after {
-			@include rotate_r(-45deg, 0.3s);
-			bottom: calc(50% - 1px);
-			
-		}
-	
-
-	}
+    &.menu_active {
+        span {
+            @include scale(0, 0.5s /* 0 */);
+        }
+        &:before {
+            @include rotate_l(45deg, 0.3s);
+            top: calc(50% - 1px);
+        }
+        &:after {
+            @include rotate_r(-45deg, 0.3s);
+            bottom: calc(50% - 1px);
+        }
+    }
 }
 .menu-icon {
-	display: none;
-	width: 30px;
-	height: 23px;
-	overflow: hidden;
-	
-	
-	a img {
-		display: block;
-		width: 100%;
-	}
+    display: none;
+    width: 30px;
+    height: 23px;
+    overflow: hidden;
 
+    a img {
+        display: block;
+        width: 100%;
+    }
 }
 .menu-icon_active {
-	@media (max-width: $md3+px) {
-		display: block;
-		position: absolute;
-		top: 16px;
-		right: 45px;
-		width: 30px;
-		z-index: 3;
-		@include overf(-100%, 0.3s);
-		a img {
-			display: block;
-			width: 100%;
-		}
-	}
+    @media (max-width: $md3+px) {
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 45px;
+        width: 30px;
+        z-index: 3;
+        @include overf(-100%, 0.3s);
+        a img {
+            display: block;
+            width: 100%;
+        }
+    }
 }
 
-
 .subheader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	@media (min-width: $md2+px) {
-		min-height: 85px;
-	}
-	
-	width: 100%;
-	z-index: 2;
-	@media (max-width: $md2+px) {
-		min-height: 60px;
-	}
-	@media (max-width: $md4+px) {
-		min-height: 50px;
-	}
-	background: linear-gradient(to right, #cdd5df, #9fe3f1);
-   
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    @media (min-width: $md2+px) {
+        min-height: 85px;
+    }
+
+    width: 100%;
+    z-index: 2;
+    @media (max-width: $md2+px) {
+        min-height: 60px;
+    }
+    @media (max-width: $md4+px) {
+        min-height: 50px;
+    }
+    background: linear-gradient(to right, #cdd5df, #9fe3f1);
+
     &__items {
-		
-		
-		
-		display: flex;
+        display: flex;
         justify-content: space-between;
-		padding: 20px 0;
-		@media (max-width: $md2+px) {
-			padding: 10px 0 5px;
-		}
-		@media (max-width: $md3+px) {
-			display: none;
-		}
-		
-		
-	}
-	.flags_active {
-		@media (max-width: $md3+px) {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			transition: all 10s ease 0s;
-			@include overf (-100%, 0.3s)
-			
-		}
-		
-	}
-    
-    
-    
-    &__item {
-		// width: 229px;
-		flex: 0 1 20%;
-		display: flex;
-		position: relative;
-		@media (min-width: $md3+px) {
-			&:hover {
-				cursor: pointer;
-			}
-		}
-		@media (max-width: $md3+px) {
-			flex: 0 1 33.333%;
-			&:nth-child(1), &:nth-child(2), &:nth-child(3){
-				margin-bottom: 10px;
-
-			}
-			
-		}
-		@media (max-width: $md4+px) {
-			margin-right: 15px;
-			flex: 0 1 auto;
-		}
-		
-        &-flag {
-			@media (min-width: $md2+px) {
-				margin-right: 11px;
-			}
-			margin-right: 3px;
-			img {
-				display: block;
-				width: 100%;
-			}
-			@media (max-width: $md4+px) {
-				width: 18px;
-				height: 15px;
-			}
-
-            
+        padding: 20px 0;
+        user-select: none;
+        @media (max-width: $md2+px) {
+            padding: 10px 0 5px;
         }
-        
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    .flags_active {
+        @media (max-width: $md3+px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            transition: all 10s ease 0s;
+            @include overf(-100%, 0.3s);
+        }
+    }
+
+    &__item {
+        // width: 229px;
+        flex: 0 1 20%;
+        display: flex;
+        position: relative;
+        @media (min-width: $md3+px) {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        @media (max-width: $md3+px) {
+            flex: 0 1 33.333%;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-bottom: 10px;
+            }
+        }
+        @media (max-width: $md4+px) {
+            margin-right: 15px;
+            flex: 0 1 auto;
+        }
+
+        &-flag {
+            @media (min-width: $md2+px) {
+                margin-right: 11px;
+            }
+            margin-right: 3px;
+            img {
+                display: block;
+                width: 100%;
+            }
+            @media (max-width: $md4+px) {
+                width: 18px;
+                height: 15px;
+            }
+        }
     }
     &__text {
         a {
             text-decoration: none;
             color: #000;
-        
         }
         address {
             font-style: normal;
@@ -201,78 +180,72 @@
         color: #242424;
         line-height: 18px;
         &-name {
-			display: inline-block;
+            display: inline-block;
             font-size: 14px;
-			font-weight: bold;
-			button {
-				width: 18px;
-				height: 18px;
-				background: url("../icons/down-arrow.svg") ;
-				display: none;
-				@media (max-width: $md2+px) {
-					display: inline;
-					width: 14px;
-					height: 14px;
-					margin: 2px;
-				}
-				
-			}
-			
-		}
-		&-descr {
-			@media (max-width: $md2+px) {
-				display: none;
-			}
-		}
-        
-        
-	}
-	.country-active {
-		.subheader {
+            font-weight: bold;
+            button {
+                width: 18px;
+                height: 18px;
+                background: url("../icons/down-arrow.svg");
+                display: none;
+                @media (max-width: $md2+px) {
+                    display: inline;
+                    width: 14px;
+                    height: 14px;
+                    margin: 2px;
+                }
+            }
+        }
+        &-descr {
+            @media (max-width: $md2+px) {
+                display: none;
+            }
+        }
+    }
+    @media (max-width: $md2+px) {
+        .subheader-item .subheader__text-descr {
+        }
+    }
 
-			// .subheader__item
-	
-			&__item {
-			}
-	
-			// .subheader__item-flag
-	
-			&__item-flag {
-			}
-	
-			// .subheader__text
-	
-			&__text {
-				
-			}
-	
-			// .subheader__text-name
-	
-			&__text-name {
-				button {
-					transform: rotate(180deg);
-				}
-				
-			}
-	
-			// .subheader__text-descr
-	
-			&__text-descr {
-				display: block;
-				position: absolute;
-				z-index: 3;
-				width: 132px;
-				background: linear-gradient(to right, #cdd5df, #9fe3f1);
-				border: 1px solid #fff;
-				border-radius: 10px;
-				padding: 5px;
-			}
-	}
-	.country-active {
-	}
-	
-	}
+    .country-active {
+        .subheader {
+            // .subheader__item
 
+            &__item {
+            }
 
+            // .subheader__item-flag
 
+            &__item-flag {
+            }
+
+            // .subheader__text
+
+            &__text {
+            }
+
+            // .subheader__text-name
+
+            &__text-name {
+                button {
+                    transform: rotate(180deg);
+                }
+            }
+
+            // .subheader__text-descr
+
+            &__text-descr {
+                display: block;
+                position: absolute;
+                z-index: 3;
+                width: 132px;
+                background: linear-gradient(to right, #cdd5df, #9fe3f1);
+                border: 1px solid #fff;
+                border-radius: 10px;
+                padding: 5px;
+            }
+        }
+        .country-active {
+        }
+    }
 }
